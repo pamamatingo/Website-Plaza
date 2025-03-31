@@ -61,6 +61,7 @@ p {
     margin-right: 1rem;
     border-radius: 10px;
 }
+
 .header-right {
     display: flex;
     align-items: center;
@@ -160,6 +161,10 @@ p {
     align-items: center;
     justify-content: center;
     color: white;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 500px;
 }
 
 .hero::after {
@@ -321,52 +326,67 @@ p {
 
 .services-list {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 2rem;
-    margin-top: 1rem;
+    padding: 2rem 1rem;
+    text-align: center;
 }
 
 .service-item {
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform var(--transition) ease-in-out;
-    position: relative;
-    max-width: 300px; 
-    flex: 1 1 calc(33.33% - 2rem);
-    box-sizing: border-box;
-    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-item:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 .service-item img {
-    width: 80px;
-    height: 80px;
+    max-width: 100px;
+    height: auto;
     margin-bottom: 1rem;
 }
 
 .service-item h3 {
-    color: var(--primary-color);
     font-size: 1.2rem;
-    margin: 0;
-    font-weight: bold;
+    color: #333;
+    margin-top: 0.5rem;
 }
 
 /* Responsive Styles */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .service-item {
-        flex: 1 1 calc(50% - 2rem); 
+        width: 200px;
+    }
+
+    .service-item img {
+        max-width: 80px;
+    }
+
+    .service-item h3 {
+        font-size: 1rem;
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 480px) {
     .service-item {
-        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .service-item img {
+        max-width: 70px;
+    }
+
+    .service-item h3 {
+        font-size: 0.9rem;
     }
 }
 
@@ -388,6 +408,51 @@ p {
 .banks-list img {
     width: 150px;
     height: auto;
+}
+
+.banks {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.banks h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.banks-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.banks-list img {
+    max-width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.banks-list img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .banks h2 {
+        font-size: 1.5rem;
+    }
+
+    .banks-list img {
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banks-list img {
+        max-width: 100px;
+    }
 }
 
 /* Productos */
@@ -541,6 +606,18 @@ form button:hover {
     border-radius: 15px;
 }
 
+/* Estilos para la sección del mapa */
+.map {
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que el contenido no se desborde fuera del borde redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para un efecto más elegante */
+}
+
+#map-9cd199b9cc5410cd3b1ad21cab2e54d3 {
+    width: 100%; /* Asegura que el mapa ocupe todo el ancho del contenedor */
+    height: 100%; /* Asegura que el mapa ocupe toda la altura del contenedor */
+}
+
 /* Scroll to Top */
 .scroll-to-top {
     background-color: var(--primary-color);
@@ -600,10 +677,16 @@ form button:hover {
 }
 
 .footer-bottom {
-    background-color: #24512f; 
-    padding: 1rem 0;
-    border-top: 1px solid #1e3e26;
-    text-align: center;
+    background-color: #2b5c2c; /* Fondo verde oscuro */
+    padding: 1.5rem 1rem; /* Espaciado interno */
+    color: #ffffff; /* Texto blanco */
+    text-align: center; /* Centraliza el contenido */
+    border-top: 1px solid #ffffff; /* Línea divisoria */
+}
+
+.footer-site-info {
+    font-size: 0.9rem;
+    color: #f1c40f; /* Color amarillo para el texto */
 }
 
 #footer-navigation ul {
@@ -611,19 +694,19 @@ form button:hover {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centraliza los enlaces */
     gap: 1.5rem;
 }
 
 #footer-navigation ul li a {
-    color: #ffffff;
+    color: #f1c40f; /* Color amarillo para los enlaces */
     text-decoration: none;
-    font-size: 0.9rem;
+    font-weight: bold;
     transition: color 0.3s ease;
 }
 
 #footer-navigation ul li a:hover {
-    color: #ffe64c;
+    color: #d4ac0d; /* Color más oscuro al pasar el cursor */
 }
 
 #footer-socials .socials {
@@ -677,14 +760,47 @@ form button:hover {
     box-sizing: border-box;
 }
 
+/* Estilos para la sección del footer */
+.footer-top {
+    background-color: #f2f2e9;
+    padding: 2rem; /* Padding general */
+    color: #1e4a22; /* Texto blanco */
+}
+
+.footer-title {
+    color: #1e4a22; /* Color amarillo para los títulos */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.gem-contacts-item {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #1e4a22; /* Texto blanco */
+}
+
+.gem-contacts-item a {
+    color: #1e4a22; /* Color amarillo para los enlaces */
+    text-decoration: none;
+}
+
+.gem-contacts-item a:hover {
+    color: #d4ac0d; /* Color más oscuro al pasar el cursor */
+}
+
+.posts.styled .gem-pp-posts-item a {
+    color: #1e4a22; /* Color amarillo para los enlaces */
+    text-decoration: none;
+}
+
+.posts.styled .gem-pp-posts-item a:hover {
+    color: #d4ac0d; /* Color más oscuro al pasar el cursor */
+}
+
 /* Responsive Styles */
 @media (max-width: 992px) {
     .hero h2 {
         font-size: 2.5rem;
-    }
-
-    .about-details div, .service-item {
-        flex: 1 1 calc(50% - 2rem);
     }
 
     .banks-list img {
@@ -727,11 +843,6 @@ form button:hover {
         gap: 0.5rem;
     }
 
-    .about-details, .services-list {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
     .hero h2 {
         font-size: 2rem;
     }
@@ -746,6 +857,10 @@ form button:hover {
 
     .swiper-slide {
         max-width: 200px;
+    }
+
+    .hero-image {
+        max-height: 300px; /* Reducir la altura máxima en pantallas medianas */
     }
 }
 
@@ -777,7 +892,7 @@ form button:hover {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
     .hero h2 {
         font-size: 1.2rem;
     }
@@ -789,4 +904,54 @@ form button:hover {
     .offer-card {
         width: 150px;
     }
+
+    .hero-image {
+        max-height: 200px; /* Reducir aún más la altura máxima en pantallas pequeñas */
+    }
+}
+
+/* Footer Bottom Styles */
+.footer-bottom {
+    background-color: #2b5c2c; /* Fondo verde oscuro */
+    padding: 1.5rem 1rem; /* Espaciado interno */
+    color: #ffffff; /* Texto blanco */
+    text-align: center; /* Centraliza el contenido */
+    border-top: 1px solid #ffffff; /* Línea divisoria */
+}
+
+.footer-site-info {
+    font-size: 0.9rem;
+    color: #f1c40f; /* Color amarillo para el texto */
+}
+
+#footer-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centraliza los enlaces */
+    gap: 1.5rem;
+}
+
+#footer-navigation ul li a {
+    color: #f1c40f; /* Color amarillo para los enlaces */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#footer-navigation ul li a:hover {
+    color: #d4ac0d; /* Color más oscuro al pasar el cursor */
+}
+
+#footer-socials .socials-item {
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    color: #f1c40f; /* Color amarillo para los íconos */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#footer-socials .socials-item:hover {
+    color: #d4ac0d; /* Color más oscuro al pasar el cursor */
+    transform: scale(1.2); /* Efecto de zoom al pasar el cursor */
 }

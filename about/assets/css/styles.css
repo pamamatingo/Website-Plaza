@@ -5,6 +5,8 @@
     --background-color: #f9f9f9;
     --text-color: #333;
     --header-bg-color: #f2f2e9;
+    --cta-bg-color: #f1c40f;
+    --cta-hover-bg-color: #d4ac0d;
     --button-radius: 20px;
     --transition: 0.3s;
 }
@@ -283,33 +285,88 @@ p {
     text-align: center;
 }
 
+/* Estilos para la sección .about-details */
 .about-details {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2.5rem;
-    justify-content: center;
+    justify-content: center; /* Centraliza los elementos horizontalmente */
+    align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas si es necesario */
+    gap: 2rem; /* Espaciado entre los elementos */
+    padding: 2rem; /* Espaciado interno */
+    text-align: center; /* Centraliza el texto dentro de cada elemento */
 }
 
 .about-details div {
-    max-width: 300px;
-    text-align: center;
-    padding: 2rem;
-    transition: transform var(--transition);
-    flex: 1 1 300px;
-    background-color: var(--background-color);
-    border-radius: 15px;
+    width: 280px; /* Ancho fijo para los cuadros */
+    height: auto; /* Altura automática para ajustar el contenido */
+    background-color: var(--background-color); /* Fondo claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 1.5rem; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para un efecto elegante */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-details div:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
 }
 
 .about-details i {
-    font-size: 2.5rem;
-    color: var(--primary-color);
+    font-size: 2.5rem; /* Tamaño de los íconos */
+    color: var(--primary-color); /* Color de los íconos */
     margin-bottom: 1rem;
 }
 
+.about-details h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color); /* Color del texto */
+    margin-bottom: 1rem;
+}
+
+.about-details p, .about-details ul {
+    font-size: 1rem;
+    color: #333; /* Color del texto */
+    line-height: 1.6;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .about-details {
+        gap: 1.5rem; /* Reducir el espacio entre elementos en pantallas medianas */
+        padding: 1.5rem;
+    }
+
+    .about-details div {
+        width: 100%; /* Los cuadros ocuparán todo el ancho disponible */
+    }
+
+    .about-details i {
+        font-size: 2rem; /* Reducir el tamaño de los íconos */
+    }
+
+    .about-details h3 {
+        font-size: 1.2rem; /* Reducir el tamaño del texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-details {
+        gap: 1rem; /* Reducir aún más el espacio entre elementos en pantallas pequeñas */
+        padding: 1rem;
+    }
+
+    .about-details i {
+        font-size: 1.8rem; /* Reducir el tamaño de los íconos */
+    }
+
+    .about-details h3 {
+        font-size: 1rem; /* Reducir el tamaño del texto */
+    }
+
+    .about-details p, .about-details ul {
+        font-size: 0.9rem; /* Reducir el tamaño del texto */
+    }
+}
 
 /* Responsive Styles */
 @media (max-width: 992px) {
@@ -323,30 +380,6 @@ p {
         flex: 1 1 100%;
     }
 }
-
-/* Productos */
-.productos {
-    padding: 3rem 1rem;
-    background-color: #fff;
-    text-align: center;
-}
-
-.filtros {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
-}
-
-.filtros input, .filtros select {
-    padding: 0.75rem 1rem;
-    border: 2px solid var(--primary-color);
-    border-radius: var(--button-radius);
-    font-size: 1rem;
-    min-width: 200px;
-}
-
 
 /* Vacantes */
 #empleos {
@@ -392,17 +425,6 @@ form button:hover {
     transform: scale(1.05);
 }
 
-/* Noticias */
-.news {
-    padding: 3rem 1rem;
-    background-color: #fff;
-    text-align: center;
-}
-
-.news p {
-    font-size: 1.1rem;
-    color: var(--text-color);
-}
 
 /* Contacto */
 #contacto {
@@ -422,6 +444,18 @@ form button:hover {
     max-width: 90%;
     border: 2px solid var(--primary-color);
     border-radius: 15px;
+}
+
+/* Estilos para la sección del mapa */
+.map {
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que el contenido no se desborde fuera del borde redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para un efecto más elegante */
+}
+
+#map-9cd199b9cc5410cd3b1ad21cab2e54d3 {
+    width: 100%; /* Asegura que el mapa ocupe todo el ancho del contenedor */
+    height: 100%; /* Asegura que el mapa ocupe toda la altura del contenedor */
 }
 
 /* Scroll to Top */
@@ -483,10 +517,16 @@ form button:hover {
 }
 
 .footer-bottom {
-    background-color: #24512f; 
-    padding: 1rem 0;
-    border-top: 1px solid #1e3e26;
-    text-align: center;
+    background-color: #2b5c2c; /* Fondo verde oscuro */
+    padding: 1.5rem 1rem; /* Espaciado interno */
+    color: #ffffff; /* Texto blanco */
+    text-align: center; /* Centraliza el contenido */
+    border-top: 1px solid #ffffff; /* Línea divisoria */
+}
+
+.footer-site-info {
+    font-size: 0.9rem;
+    color: #f1c40f; /* Color amarillo para el texto */
 }
 
 #footer-navigation ul {
@@ -494,19 +534,19 @@ form button:hover {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centraliza los enlaces */
     gap: 1.5rem;
 }
 
 #footer-navigation ul li a {
-    color: #ffffff;
+    color: #f1c40f; /* Color amarillo para los enlaces */
     text-decoration: none;
-    font-size: 0.9rem;
+    font-weight: bold;
     transition: color 0.3s ease;
 }
 
 #footer-navigation ul li a:hover {
-    color: #ffe64c;
+    color: #d4ac0d; /* Color más oscuro al pasar el cursor */
 }
 
 #footer-socials .socials {
@@ -531,33 +571,41 @@ form button:hover {
     transform: scale(1.1);
 }
 
-/* Swiper Container Wrapper */
-.swiper-container-wrapper {
-    max-width: 100%; 
-    margin: 0 auto;
-    padding: 0 15px;
-    box-sizing: border-box;
-    overflow: hidden; 
+/* Estilos para la sección del footer */
+.footer-top {
+    background-color: #f2f2e9;
+    padding: 2rem; /* Padding general */
+    color: #1e4a22; /* Texto blanco */
 }
 
-/* Swiper Container */
-.offers-swiper {
-    max-width: 900px;
-    height: auto; 
-    margin: 0 auto; 
+.footer-title {
+    color: #1e4a22; /* Color amarillo para los títulos */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-/* Swiper Slides */
-.swiper-wrapper {
-    display: flex;
-    align-items: center;
+.gem-contacts-item {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #1e4a22; /* Texto blanco */
 }
 
-.swiper-slide {
-    width: auto; 
-    max-width: 300px; 
-    margin: 0 10px; 
-    box-sizing: border-box;
+.gem-contacts-item a {
+    color: #1e4a22; /* Color amarillo para los enlaces */
+    text-decoration: none;
+}
+
+.gem-contacts-item a:hover {
+    color: #d4ac0d; /* Color más oscuro al pasar el cursor */
+}
+
+.posts.styled .gem-pp-posts-item a {
+    color: #1e4a22; /* Color amarillo para los enlaces */
+    text-decoration: none;
+}
+
+.posts.styled .gem-pp-posts-item a:hover {
+    color: #d4ac0d; /* Color más oscuro al pasar el cursor */
 }
 
 /* Responsive Styles */
@@ -619,27 +667,14 @@ form button:hover {
         font-size: 2rem;
     }
 
-    .swiper-container-wrapper {
-        padding: 0 10px;
-    }
-
-    .offers-swiper {
-        max-width: 100%;
-    }
-
-    .swiper-slide {
-        max-width: 200px;
+    .hero-image {
+        max-height: 300px; /* Reducir la altura máxima en pantallas medianas */
     }
 }
 
 @media (max-width: 576px) {
     .logo-container img {
         max-height: 40px;
-    }
-
-    .login-button, .cart-button {
-        padding: 0.5rem;
-        font-size: 0.9rem;
     }
 
     .cta-button {
@@ -665,11 +700,53 @@ form button:hover {
         font-size: 1.2rem;
     }
 
-    .offers-title {
-        font-size: 1.5rem;
+    .hero-image {
+        max-height: 200px; 
     }
+}
 
-    .offer-card {
-        width: 150px;
-    }
+/* Footer Bottom Styles */
+.footer-bottom {
+    background-color: #2b5c2c; /* Fondo verde oscuro */
+    padding: 1.5rem 1rem; /* Espaciado interno */
+    color: #ffffff; /* Texto blanco */
+    text-align: center; /* Centraliza el contenido */
+    border-top: 1px solid #ffffff; /* Línea divisoria */
+}
+
+.footer-site-info {
+    font-size: 0.9rem;
+    color: #f1c40f; /* Color amarillo para el texto */
+}
+
+#footer-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centraliza los enlaces */
+    gap: 1.5rem;
+}
+
+#footer-navigation ul li a {
+    color: #f1c40f; /* Color amarillo para los enlaces */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#footer-navigation ul li a:hover {
+    color: #d4ac0d; /* Color más oscuro al pasar el cursor */
+}
+
+#footer-socials .socials-item {
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    color: #f1c40f; /* Color amarillo para los íconos */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#footer-socials .socials-item:hover {
+    color: #d4ac0d; /* Color más oscuro al pasar el cursor */
+    transform: scale(1.2); /* Efecto de zoom al pasar el cursor */
 }
