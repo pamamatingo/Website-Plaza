@@ -1,0 +1,135 @@
+/* --------------------------------------------------
+   Tipografía y fondo
+-------------------------------------------------- */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --------------------------------------------------
+   Navbar
+-------------------------------------------------- */
+.navbar-brand {
+    font-weight: 600;
+}
+.navbar .nav-link {
+    color: rgba(255,255,255,0.85);
+}
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: #fff;
+}
+
+/* --------------------------------------------------
+   Tarjetas (cards)
+-------------------------------------------------- */
+.card {
+    border: none;
+    border-radius: 0.75rem;
+    transition: transform 0.2s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* --------------------------------------------------
+   Iconos dentro de las cards
+-------------------------------------------------- */
+.card-icon {
+    font-size: 3rem;
+}
+
+/* --------------------------------------------------
+   Botones link en navbar (logout)
+-------------------------------------------------- */
+.btn-link {
+    text-decoration: none;
+    padding: 0;
+    font-weight: 400;
+}
+.btn-link.nav-link {
+    color: inherit;
+}
+.btn-link.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* --------------------------------------------------
+   Skip link para accesibilidad
+-------------------------------------------------- */
+.visually-hidden-focusable {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+.visually-hidden-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+}
+
+/* --------------------------------------------------
+   Utilidades responsivas propias
+-------------------------------------------------- */
+@media (max-width: 576px) {
+    .card-body {
+        padding: 2rem 1rem;
+    }
+}
+/* === Resumen de estilos previos === */
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-brand { font-weight: 600; }
+.navbar .nav-link { color: rgba(255,255,255,0.85); }
+.navbar .nav-link:hover,
+.navbar .nav-link.active { color: #fff; }
+
+.card {
+    border: none;
+    border-radius: 0.75rem;
+    transition: transform 0.2s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.card-icon { font-size: 3rem; }
+
+.btn-link { text-decoration: none; padding: 0; }
+.btn-link:hover { text-decoration: underline; }
+
+.visually-hidden-focusable {
+    position: absolute; width:1px; height:1px; padding:0; margin:-1px;
+    overflow:hidden; clip:rect(0,0,0,0); border:0;
+}
+.visually-hidden-focusable:focus {
+    position:static; width:auto; height:auto; margin:0; overflow:visible; clip:auto;
+}
+
+/* === NUEVOS ESTILOS: Formulario Crear Oferta === */
+
+.form-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 .1rem .25rem rgba(0,0,0,0.1);
+}
+.form-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+@media (max-width: 576px) {
+    .form-container { padding: 1rem; }
+}

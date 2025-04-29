@@ -1,0 +1,25 @@
+/* VARIABLES GLOBALES */
+:root {
+    /* Colores principales */
+    --primary-color: #2b5c2c;
+    --secondary-color: #f1c40f;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --header-bg-color: #f2f2e9;
+    --cta-bg-color: #f1c40f;
+    --cta-hover-bg-color: #d4ac0d;
+
+    /* Bordes y radio */
+    --button-radius: 20px;
+
+    /* Transiciones */
+    --transition: 0.3s ease-in-out;
+
+    /* Sombras */
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+    /* Tipografías */
+    --main-font: 'Poppins', sans-serif;
+    --secondary-font: 'Roboto', sans-serif;
+}

@@ -1,0 +1,51 @@
+/* BANKS SECTION */
+.banks {
+    padding: 2rem 1rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Título de la sección */
+.banks h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* Contenedor de los logos */
+.banks-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* Logo individual de cada banco */
+.banks-list img {
+    max-width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Animación al pasar el cursor */
+.banks-list img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive para bancos */
+@media (max-width: 768px) {
+    .banks h2 {
+        font-size: 1.5rem;
+    }
+
+    .banks-list img {
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banks-list img {
+        max-width: 100px;
+    }
+}

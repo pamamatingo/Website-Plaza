@@ -1,0 +1,66 @@
+/* HERO SECTION */
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    min-height: 400px;
+    background-image: url('img/mamatingo.png'); /* Actualiza la ruta según donde pongas la imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    max-height: 500px;
+}
+
+/* Overlay oscuro encima de la imagen */
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* Contenido que aparece sobre la imagen */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 1s ease-in-out;
+}
+
+.hero-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Títulos dentro del Hero */
+.hero-content h2 {
+    font-size: 3rem;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+/* Botón de Call to Action */
+.cta-button {
+    background-color: var(--cta-bg-color);
+    color: #704f2a;
+    text-decoration: none;
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color var(--transition), transform var(--transition);
+}
+
+.cta-button:hover {
+    background-color: var(--cta-hover-bg-color);
+    transform: scale(1.05);
+}

@@ -1,0 +1,110 @@
+/* HEADER GENERAL */
+.header {
+    background-color: var(--header-bg-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--box-shadow);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    max-height: 50px;
+    margin-right: 1rem;
+    border-radius: 10px;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color var(--transition), transform var(--transition);
+}
+
+.navbar a:hover {
+    color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* HEADER BOTONES (login - carrito) */
+.login-button,
+.cart-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--button-radius);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color var(--transition), transform var(--transition);
+}
+
+.login-button:hover,
+.cart-button:hover {
+    background-color: #1e4a22;
+    transform: scale(1.05);
+}
+
+/* CARRITO */
+.cart-button {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* SEARCH EN HEADER */
+.header-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.header-search input {
+    padding: 0.5rem 1rem;
+    border-radius: var(--button-radius);
+    border: 1px solid var(--primary-color);
+    font-size: 1rem;
+}
+
+.header-search button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-color);
+    position: absolute;
+    right: 10px;
+}

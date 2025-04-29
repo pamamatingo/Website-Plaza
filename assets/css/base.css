@@ -1,0 +1,107 @@
+/* Variables globales */
+:root {
+    --primary-color: #2b5c2c;
+    --secondary-color: #f1c40f;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --header-bg-color: #f2f2e9;
+    --cta-bg-color: #f1c40f;
+    --cta-hover-bg-color: #d4ac0d;
+    --button-radius: 20px;
+    --transition: 0.3s;
+}
+
+/* Reset y estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Tipografía */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+/* Botones generales */
+button, input[type="submit"], .cta-button, .login-button, .cart-button, .agregar-carrito {
+    border: none;
+    border-radius: var(--button-radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color var(--transition), transform var(--transition);
+}
+
+.cta-button {
+    background-color: var(--cta-bg-color);
+    color: #704f2a;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: var(--cta-hover-bg-color);
+    transform: scale(1.05);
+}
+
+.login-button, .cart-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+.login-button:hover, .cart-button:hover {
+    background-color: #1e4a22;
+    transform: scale(1.05);
+}
+
+.agregar-carrito {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+.agregar-carrito:hover {
+    background-color: #1e4a22;
+    transform: scale(1.05);
+}
+
+/* Inputs generales */
+input[type="text"], input[type="email"], input[type="file"], select {
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--button-radius);
+    font-size: 1rem;
+}
+
+/* Enlaces */
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color var(--transition);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
