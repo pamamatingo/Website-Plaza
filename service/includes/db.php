@@ -2,7 +2,7 @@
 // Parámetros de conexión a la base de datos
 $DB_HOST = 'localhost';  // Servidor local
 $DB_NAME = 'mmtingoapp'; // 👉 Aquí debes poner el nombre real de tu base de datos
-$DB_USER = 'root'; // Tu usuario MySQL
+$DB_USER = 'u581074857_root'; // Tu usuario MySQL
 $DB_PASS = ']y6B>pf+Q/;'; // Tu contraseña de MySQL
 
 // Intentar conexión usando PDO
