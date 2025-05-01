@@ -124,29 +124,39 @@
 </section>
 
 
-<!-- Contacto -->
-<section id="contacto">
-    <h2 data-aos="fade-up">Contacto</h2>
-    <p data-aos="fade-up">
-        Ave. Hermanas Mirabal No. 60, Esq. Calle 4ta, Urbanización Vista Bella.<br>
-        Teléfono: 809-245-5306<br>
-        Email: <a href="mailto:info@mamatingo.do">info@mamatingo.do</a>
+<!-- Contacto: sección optimizada -->
+<section id="contacto" class="contacto">
+  <h2>Contacto</h2>
+  <div class="contacto__info">
+    <p class="contacto__line">
+      <svg class="icon"><use href="#icon-map-marker"/></svg>
+      Ave. Hermanas Mirabal No. 60, Esq. Calle 4ta, Vista Bella.
     </p>
-    <h3>Ubícanos</h3>
-        <div class="map" id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
-            <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
-            var setting = {"query":"Av. Hermanas Mirabal 60,11301, República Dominicana","width":900,"height":400,"satellite":false,"zoom":12,"placeId":"ChIJ714ajtOIr44RyaRtonEquaQ","cid":"0xa4b92a71a26da4c9","coords":[18.546623716924895, -69.90059197346791],"cityUrl":"/dominican-republic/santo-domingo-18405","cityAnchorText":"Map of Santo Domingo, Distrito Nacional, Dominican Republic","lang":"es-es","queryString":"Av. Hermanas Mirabal 60,11301, República Dominicana","centerCoord":[18.546623716924895, -69.90059197346791],"id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"1196579"};
-            var d = document;
-            var s = d.createElement('script');
-            s.src = 'https://1map.com/js/script-for-user.js?embed_id=1196579';
-            s.async = true;
-            s.onload = function (e) {
-              window.OneMap.initMap(setting)
-            };
-            var to = d.getElementsByTagName('script')[0];
-            to.parentNode.insertBefore(s, to);
-          })();</script></div>
+    <p class="contacto__line">
+      <svg class="icon"><use href="#icon-phone"/></svg>
+      <a href="tel:+18092455306">809-245-5306</a>,
+      <a href="tel:+18493535454">849-353-5454</a>
+    </p>
+    <p class="contacto__line">
+      <svg class="icon"><use href="#icon-envelope"/></svg>
+      <a href="mailto:info@mamatingo.do">info@mamatingo.do</a>
+    </p>
+    <button class="btn btn--primary" onclick="scrollToMapa()">
+      Ubícanos
+    </button>
+  </div>
+
+  <!-- Placeholder LQIP; iframe se inyecta con JS -->
+  <div id="mapa" class="contacto__mapa">
+    <img
+      src="img/mapa-placeholder.webp"
+      alt="Mapa de ubicación"
+      loading="lazy"
+      class="contacto__mapa-img"
+    >
+  </div>
 </section>
+
 
 <!-- Incluir CSS y JS de Leaflet -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
